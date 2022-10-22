@@ -1,0 +1,17 @@
+{
+  "name": "pts-gradient-issue",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "start": "vite --open"
+  },
+  "devDependencies": {
+    "pts": "^0.11.2",
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9",
+    "vite-plugin-solid": "^2.3.0"
+  },
+  "dependencies": {
+    "solid-js": "^1.5.1"
+  }
+}

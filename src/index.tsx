@@ -4,7 +4,7 @@ import { CanvasSpace, Circle, Pt } from "pts"
 import { createSignal, onCleanup, onMount } from 'solid-js';
 
 // setup PTS
-function setupPts (space: CanvasSpace) {
+function setupPts(space: CanvasSpace) {
   space.setup({ bgcolor: "white", resize: true })
   const form = space.getForm()
   space.add(() => {
@@ -31,16 +31,16 @@ const [ptsCenter, setPtsCenter] = createSignal({ x: 0, y: 0 })
 
 // setup HTML
 render(() => {
-	let canvas: HTMLCanvasElement | undefined
+  let canvas: HTMLCanvasElement | undefined
   let space: CanvasSpace | undefined
   onMount(() => {
-		if (!canvas) { return } 
-		space = new CanvasSpace(canvas)
-		setupPts(space)
-	})
-	onCleanup(() => {
-		space?.dispose()
-	})
+    if (!canvas) { return }
+    space = new CanvasSpace(canvas)
+    setupPts(space)
+  })
+  onCleanup(() => {
+    space?.dispose()
+  })
   const centerStyle = { display: 'flex', "justify-content": "center", "align-items": "center", width: "100%", height: "100vh" }
   return <>
     <div onMouseMove={({ x, y }) => setMouse({ x, y })} style={centerStyle}>
